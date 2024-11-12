@@ -11,6 +11,29 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
 .list {
     list-style: none;
 }
@@ -32,10 +55,17 @@ body {
     margin: -1px;
 }
 
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
 /* ----------------- HEADER ----------------- */
 
 .header {
     background-color: grey;
+    padding: 32px 0;
 }
 
 .header-link,
@@ -109,6 +139,10 @@ body {
 
 /* ----------------- ABOUT ----------------- */
 
+.about {
+    padding: 139px 0 121px;
+}
+
 .about-pre-title {
     font-weight: 600;
     font-size: 11px;
@@ -116,6 +150,7 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #303030;
+    margin-bottom: 20px;
 }
 
 .about-title {
@@ -124,6 +159,7 @@ body {
     line-height: 1.17;
     letter-spacing: 0.05em;
     color: var(--second-title-color);
+    margin-bottom: 20px;
 }
 
 .about-after-title {
@@ -131,6 +167,7 @@ body {
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: #555555;
+    margin-bottom: 20px;
 }
 
 .about-text {
@@ -138,6 +175,7 @@ body {
     line-height: 1.86;
     letter-spacing: 0.02em;
     color: #555555;
+    margin-bottom: 40px;
 }
 
 .about-btn {
@@ -154,6 +192,7 @@ body {
 
 .prices {
     background-color: gray;
+    padding: 130px 0;
 }
 
 .prices-pre-title {
@@ -163,6 +202,7 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.6);
+    margin-bottom: 20px;
 }
 
 .prices-title {
@@ -171,6 +211,7 @@ body {
     line-height: 1.17;
     letter-spacing: 0.05em;
     color: var(--first-title-color);
+    margin-bottom: 44px;
 }
 
 .prices-item-text {
@@ -191,6 +232,10 @@ body {
 }
 
 /* ----------------- REASONS ----------------- */
+
+.reasons {
+    padding: 121px 0 130px;
+}
 
 .reasons-digit {
     font-weight: 700;
@@ -216,6 +261,7 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #303030;
+    margin-bottom: 20px;
 }
 
 .reasons-title {
@@ -224,6 +270,7 @@ body {
     line-height: 1.17;
     letter-spacing: 0.05em;
     color: var(--second-title-color);
+    margin-bottom: 20px;
 }
 
 .reasons-after-title {
@@ -235,6 +282,10 @@ body {
 
 /* ----------------- MASTERS ----------------- */
 
+.masters {
+    padding: 130px 0;
+}
+
 .masters-pre-title {
     font-weight: 600;
     font-size: 11px;
@@ -242,6 +293,7 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #303030;
+    margin-bottom: 20px;
 }
 
 .masters-title {
@@ -250,6 +302,7 @@ body {
     line-height: 1.17;
     letter-spacing: 0.05em;
     color: var(--second-title-color);
+    margin-bottom: 44px;
 }
 
 .masters-item-title {
@@ -268,4 +321,10 @@ body {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--accent-color);
+}
+
+/* ----------------- GALLERY ----------------- */
+
+.gallery {
+    padding: 130px 0;
 }
