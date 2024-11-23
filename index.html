@@ -22,7 +22,7 @@
     </head>
     <body>
         <header class="header">
-            <div class="container">
+            <div class="container header-container">
                 <a class="header-logo link" href="./">
                     <img src="./images/logo.svg" alt="лого сайта" />
                 </a>
@@ -46,15 +46,19 @@
                         </li>
                     </ul>
                 </nav>
-                <a class="header-tel link" href="tel:+380441111111">
-                    +38 044 111 11 11
-                </a>
-                <button class="header-btn" type="button">онлайн-запись</button>
+                <div class="header-connect">
+                    <a class="header-tel link" href="tel:+380441111111">
+                        +38 044 111 11 11
+                    </a>
+                    <button class="header-btn" type="button">
+                        онлайн-запись
+                    </button>
+                </div>
             </div>
         </header>
         <main>
             <section class="hero">
-                <div class="container">
+                <div class="container hero-container">
                     <ul class="hero-list list">
                         <li class="hero-item">
                             <a
@@ -77,14 +81,16 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="hero-pre-title" lang="en">
-                        A hair salon for men in Kyiv
-                    </p>
-                    <h1 class="hero-title" lang="en">BarberShop</h1>
-                    <p class="hero-after-title">
-                        Мы эксперты в модных мужских стрижках. Работаем быстро,
-                        осторожно и со вкусом.
-                    </p>
+                    <div class="hero-right">
+                        <p class="hero-pre-title" lang="en">
+                            A hair salon for men in Kyiv
+                        </p>
+                        <h1 class="hero-title" lang="en">BarberShop</h1>
+                        <p class="hero-after-title">
+                            Мы эксперты в модных мужских стрижках. Работаем
+                            быстро, осторожно и со вкусом.
+                        </p>
+                    </div>
                 </div>
             </section>
             <section class="about" id="about">
@@ -271,8 +277,8 @@
                 <div class="container">
                     <p>На латинском языке “барба” означает “борода”</p>
                     <h2 class="visually-hidden">Галерея</h2>
-                    <ul class="list">
-                        <li>
+                    <ul class="gallery-list list">
+                        <li class="gallery-item">
                             <img
                                 src="./images/gallery-img-1.jpg"
                                 alt="барбер стрижет клиента"
@@ -280,7 +286,7 @@
                                 height="360"
                             />
                         </li>
-                        <li>
+                        <li class="gallery-item">
                             <img
                                 src="./images/gallery-img-2.jpg"
                                 alt="барбер бреет клиента"
@@ -288,7 +294,7 @@
                                 height="360"
                             />
                         </li>
-                        <li>
+                        <li class="gallery-item">
                             <img
                                 src="./images/gallery-img-3.jpg"
                                 alt="барбер разогревает кожу клиента"
@@ -296,7 +302,7 @@
                                 height="360"
                             />
                         </li>
-                        <li>
+                        <li class="gallery-item">
                             <img
                                 src="./images/gallery-img-4.jpg"
                                 alt="барбер делает кантик"
