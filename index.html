@@ -24,7 +24,9 @@
         <header class="header">
             <div class="container header-container">
                 <a class="header-logo link" href="./">
-                    <img src="./images/logo.svg" alt="лого сайта" />
+                    <svg class="header-logo-icon" width="67" height="56">
+                        <use href="./images/icons.svg#icon-logo"></use>
+                    </svg>
                 </a>
                 <nav class="header-nav">
                     <ul class="header-list list">
@@ -42,7 +44,9 @@
                             </a>
                         </li>
                         <li class="header-item">
-                            <a class="header-link link" href="">Контакты</a>
+                            <a class="header-link link" href="#contacts">
+                                Контакты
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -50,7 +54,7 @@
                     <a class="header-tel link" href="tel:+380441111111">
                         +38 044 111 11 11
                     </a>
-                    <button class="header-btn" type="button">
+                    <button class="header-btn btn" type="button">
                         онлайн-запись
                     </button>
                 </div>
@@ -82,7 +86,7 @@
                         </li>
                     </ul>
                     <div class="hero-right">
-                        <p class="hero-pre-title" lang="en">
+                        <p class="hero-pre-title pre-title" lang="en">
                             A hair salon for men in Kyiv
                         </p>
                         <h1 class="hero-title" lang="en">BarberShop</h1>
@@ -113,8 +117,10 @@
                             />
                         </li>
                     </ul>
-                    <p class="about-pre-title">О нас</p>
-                    <h2 class="about-title">Лучший Барбершоп твоего города</h2>
+                    <p class="about-pre-title pre-title">О нас</p>
+                    <h2 class="about-title section-title">
+                        Лучший Барбершоп твоего города
+                    </h2>
                     <p class="about-after-title">
                         Если ты хочешь добавить в свой образ больше уверенности
                         – тебе точно к нам.
@@ -127,60 +133,66 @@
                         Поэтому, мы всегда готовы усовершенствовать каждого, кто
                         к нам приходит!
                     </p>
-                    <button class="about-btn" type="button">
+                    <button class="about-btn btn" type="button">
                         онлайн-запись
                     </button>
                 </div>
             </section>
             <section class="prices" id="prices">
                 <div class="container">
-                    <p class="prices-pre-title">
+                    <p class="prices-pre-title pre-title">
                         Проведи время в компании лучших мастеров
                     </p>
-                    <h2 class="prices-title">Услуги и цены</h2>
-                    <ul class="prices-list list">
-                        <li class="prices-item">
-                            <p class="prices-item-text">Мужская стрижка</p>
-                            <p class="prices-item-text">от 300 грн.</p>
-                        </li>
-                        <li class="prices-item">
-                            <p class="prices-item-text">Стрижка бороды</p>
-                            <p class="prices-item-text">от 200 грн.</p>
-                        </li>
-                        <li class="prices-item">
-                            <p class="prices-item-text">Стрижка усов</p>
-                            <p class="prices-item-text">от 200 грн.</p>
-                        </li>
-                        <li class="prices-item">
-                            <p class="prices-item-text">
-                                Бритье опасной бритвой
-                            </p>
-                            <p class="prices-item-text">от 200 грн.</p>
-                        </li>
-                    </ul>
-                    <ul class="prices-list list">
-                        <li class="prices-item">
-                            <p class="prices-item-text">Cтрижка у стажера</p>
-                            <p class="prices-item-text">от 50 грн.</p>
-                        </li>
-                        <li class="prices-item">
-                            <p class="prices-item-text">Стрижка под насадку</p>
-                            <p class="prices-item-text">от 200 грн.</p>
-                        </li>
-                        <li class="prices-item">
-                            <p class="prices-item-text">
-                                Детская стрижка (до 12 лет)
-                            </p>
-                            <p class="prices-item-text">от 300 грн.</p>
-                        </li>
-                        <li class="prices-item">
-                            <p class="prices-item-text">
-                                Камуфлирование седины
-                            </p>
-                            <p class="prices-item-text">от 200 грн.</p>
-                        </li>
-                    </ul>
-                    <button class="prices-btn" type="button">
+                    <h2 class="prices-title section-title">Услуги и цены</h2>
+                    <div class="prices-wrap">
+                        <ul class="prices-list prices-list-left list">
+                            <li class="prices-item">
+                                <p class="prices-item-text">Мужская стрижка</p>
+                                <p class="prices-item-text">от 300 грн.</p>
+                            </li>
+                            <li class="prices-item">
+                                <p class="prices-item-text">Стрижка бороды</p>
+                                <p class="prices-item-text">от 200 грн.</p>
+                            </li>
+                            <li class="prices-item">
+                                <p class="prices-item-text">Стрижка усов</p>
+                                <p class="prices-item-text">от 200 грн.</p>
+                            </li>
+                            <li class="prices-item">
+                                <p class="prices-item-text">
+                                    Бритье опасной бритвой
+                                </p>
+                                <p class="prices-item-text">от 200 грн.</p>
+                            </li>
+                        </ul>
+                        <ul class="prices-list prices-list-right list">
+                            <li class="prices-item">
+                                <p class="prices-item-text">
+                                    Cтрижка у стажера
+                                </p>
+                                <p class="prices-item-text">от 50 грн.</p>
+                            </li>
+                            <li class="prices-item">
+                                <p class="prices-item-text">
+                                    Стрижка под насадку
+                                </p>
+                                <p class="prices-item-text">от 200 грн.</p>
+                            </li>
+                            <li class="prices-item">
+                                <p class="prices-item-text">
+                                    Детская стрижка (до 12 лет)
+                                </p>
+                                <p class="prices-item-text">от 300 грн.</p>
+                            </li>
+                            <li class="prices-item">
+                                <p class="prices-item-text">
+                                    Камуфлирование седины
+                                </p>
+                                <p class="prices-item-text">от 200 грн.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="prices-btn btn" type="button">
                         онлайн-запись
                     </button>
                 </div>
@@ -213,8 +225,12 @@
                             </p>
                         </li>
                     </ul>
-                    <p class="reasons-pre-title">старая традиционная школа</p>
-                    <h2 class="reasons-title">Почему приходят именно к нам?</h2>
+                    <p class="reasons-pre-title pre-title">
+                        старая традиционная школа
+                    </p>
+                    <h2 class="reasons-title section-title">
+                        Почему приходят именно к нам?
+                    </h2>
                     <p class="reasons-after-title">
                         О нас говорят только хорошее. Но лучше 1 раз увидеть и
                         прочувствовать, чем 10 раз прочитать.
@@ -223,10 +239,10 @@
             </section>
             <section class="masters" id="masters">
                 <div class="container">
-                    <p class="masters-pre-title">
+                    <p class="masters-pre-title pre-title">
                         для настоящих ценителей атмосферы
                     </p>
-                    <h2 class="masters-title">Наши мастера</h2>
+                    <h2 class="masters-title section-title">Наши мастера</h2>
                     <ul class="masters-list list">
                         <li class="masters-item">
                             <img
@@ -235,12 +251,72 @@
                                 width="370"
                                 height="346"
                             />
-                            <h3 class="masters-item-title" lang="en">
-                                John Smith
-                            </h3>
-                            <p class="masters-item-text" lang="en">
-                                Extreme Barber
-                            </p>
+                            <div class="masters-item-content">
+                                <h3 class="masters-item-title" lang="en">
+                                    John Smith
+                                </h3>
+                                <p class="masters-item-text" lang="en">
+                                    Extreme Barber
+                                </p>
+                                <ul class="masters-social-list list">
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-instagram"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-twitter"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-facebook"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-linkedin"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="masters-item">
                             <img
@@ -249,12 +325,72 @@
                                 width="370"
                                 height="346"
                             />
-                            <h3 class="masters-item-title" lang="en">
-                                Michele Doe
-                            </h3>
-                            <p class="masters-item-text" lang="en">
-                                Extreme Barber
-                            </p>
+                            <div class="masters-item-content">
+                                <h3 class="masters-item-title" lang="en">
+                                    Michele Doe
+                                </h3>
+                                <p class="masters-item-text" lang="en">
+                                    Extreme Barber
+                                </p>
+                                <ul class="masters-social-list list">
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-instagram"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-twitter"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-facebook"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-linkedin"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="masters-item">
                             <img
@@ -263,19 +399,81 @@
                                 width="370"
                                 height="346"
                             />
-                            <h3 class="masters-item-title" lang="en">
-                                Alan Black
-                            </h3>
-                            <p class="masters-item-text" lang="en">
-                                Extreme Barber
-                            </p>
+                            <div class="masters-item-content">
+                                <h3 class="masters-item-title" lang="en">
+                                    Alan Black
+                                </h3>
+                                <p class="masters-item-text" lang="en">
+                                    Extreme Barber
+                                </p>
+                                <ul class="masters-social-list list">
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-instagram"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-twitter"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-facebook"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a
+                                            class="masters-social-link"
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <svg class="masters-social-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-linkedin"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </section>
             <section class="gallery">
                 <div class="container">
-                    <p>На латинском языке “барба” означает “борода”</p>
+                    <p class="pre-title">
+                        На латинском языке “барба” означает “борода”
+                    </p>
                     <h2 class="visually-hidden">Галерея</h2>
                     <ul class="gallery-list list">
                         <li class="gallery-item">
@@ -313,38 +511,72 @@
                     </ul>
                 </div>
             </section>
-            <section>
-                <h2>Онлайн-запись</h2>
-            </section>
-            <section>
-                <h2>Контакты</h2>
-                <address>
-                    <ul class="list">
-                        <li>
-                            <a
-                                class="link"
-                                href="https://goo.gl/maps/FUhfVF4S8dZSCrUF8"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                ул. Васильковая, 7А Киев, 08132
-                            </a>
-                        </li>
-                        <li>
-                            <a class="link" href="tel:+380441111111">
-                                +38 044 111 11 11
-                            </a>
-                        </li>
-                        <li>
-                            <a class="link" href="mailto:barbershop@email.com">
-                                barbershop@email.com
-                            </a>
-                        </li>
-                    </ul>
-                </address>
-                <b>время работы</b>
-                <p>Ежедневно с 9:00 до 22:00</p>
-            </section>
+            <div class="connect-wrap">
+                <div class="container connect-container">
+                    <section class="online">
+                        <h2>Онлайн-запись</h2>
+                    </section>
+                    <section class="contacts" id="contacts">
+                        <h2 class="contacts-title section-title">Контакты</h2>
+                        <address class="contacts-address">
+                            <ul class="contacts-list list">
+                                <li class="contacts-item">
+                                    <a
+                                        class="contacts-link link"
+                                        href="https://goo.gl/maps/FUhfVF4S8dZSCrUF8"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <div class="contacts-link-line">
+                                            <svg class="contacts-link-icon">
+                                                <use
+                                                    href="./images/icons.svg#icon-map-pin"
+                                                ></use>
+                                            </svg>
+                                            ул. Васильковая, 7А
+                                        </div>
+                                        <span class="contacts-link-text">
+                                            Киев, 08132
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="contacts-item">
+                                    <a
+                                        class="contacts-link link"
+                                        href="tel:+380441111111"
+                                    >
+                                        <svg class="contacts-link-icon">
+                                            <use
+                                                href="./images/icons.svg#icon-phone"
+                                            ></use>
+                                        </svg>
+                                        +38 044 111 11 11
+                                    </a>
+                                </li>
+                                <li class="contacts-item">
+                                    <a
+                                        class="contacts-link link"
+                                        href="mailto:barbershop@email.com"
+                                    >
+                                        <svg class="contacts-link-icon">
+                                            <use
+                                                href="./images/icons.svg#icon-mail"
+                                            ></use>
+                                        </svg>
+                                        barbershop@email.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                        <b class="contacts-bottom-title pre-title">
+                            время работы
+                        </b>
+                        <p class="contacts-bottom-text">
+                            Ежедневно с 9:00 до 22:00
+                        </p>
+                    </section>
+                </div>
+            </div>
         </main>
         <footer>
             <p>&copy; Copyright 2020</p>
