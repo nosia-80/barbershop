@@ -1,0 +1,30 @@
+.socials-list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        background-color: #303030;
+        margin-right: 40px;
+    }
+}
+
+.socials-list__item {
+    & + & {
+        margin-left: 40px;
+    }
+}
+
+.socials-list__link {
+    color: #303030;
+    @include font($fs: 11px, $ls: 0.2em);
+    transition: color 300ms linear;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}

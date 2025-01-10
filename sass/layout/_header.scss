@@ -6,38 +6,36 @@
     padding: 32px 0;
 }
 
-.header-container {
+.header__container {
     display: flex;
     align-items: center;
 }
 
-.header-logo {
+.header__logo {
     margin-right: 70px;
 }
 
-.header-logo-icon {
+.logo__icon {
     fill: #303030;
 }
 
-.header-list {
+.site-list {
+    @extend %list;
     display: flex;
 }
 
-.header-item:not(:last-child) {
+.site-list__item:not(:last-child) {
     margin-right: 40px;
 }
 
-.header-connect {
+.connect {
     margin-left: auto;
 }
 
-.header-link,
-.header-tel {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
+.site-list__link,
+.connect__tel {
     color: $header-color;
+    @include font($fs: 12px, $lh: 1.33, $ls: 0.1em);
     transition: color 300ms linear;
 
     &:hover,
@@ -46,7 +44,7 @@
     }
 }
 
-.header-btn {
+.connect__btn {
     color: $first-btn-color;
     margin-left: 40px;
 }

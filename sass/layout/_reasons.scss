@@ -2,28 +2,29 @@
     padding: 121px 0 130px;
 }
 
-.reasons-container {
+.reasons__container {
     display: flex;
 }
 
-.reasons-left {
+.reasons__stats {
     display: flex;
     justify-content: center;
     margin-right: 30px;
 }
 
-.reasons-left,
-.reasons-right {
+.reasons__stats,
+.reasons__content {
     flex-basis: calc((100% - 30px) / 2);
 }
 
 .reasons-list {
+    @extend %list;
     width: 370px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.reasons-item {
+.reasons-list__item {
     width: 170px;
     background-color: #f7f7f7;
     height: 133px;
@@ -39,36 +40,44 @@
     }
 }
 
-.reasons-digit {
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.36;
+.reasons-list__digit {
     text-align: center;
-    letter-spacing: 0.05em;
+    @include font($fs: 42px, $fw: 700, $ls: 0.05em);
     color: #303030;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 22px;
+        background-image: url("../images/icon-plus.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 7px;
+        right: -15px;
+    }
 }
 
-.reasons-item-text {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
+.reasons-list__text {
     text-align: center;
+    @include font(11px, 600, 1.36, null);
     color: #303030;
     margin-top: 6px;
 }
 
-.reasons-pre-title {
+.reasons__pre-title {
     color: #303030;
 }
 
-.reasons-title {
+.reasons__title {
     color: $second-title-color;
     margin-bottom: 20px;
 }
 
-.reasons-after-title {
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
+.reasons__after-title {
     color: #555555;
+    @include font(18px, null, 1.67, 0.02em);
+    width: 500px;
 }

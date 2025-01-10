@@ -33,10 +33,7 @@
 .online-input,
 .online-text {
     outline: none;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include font($fs: 11px, $ls: 0.1em);
     color: #ffffff;
     border: none;
     background-color: transparent;

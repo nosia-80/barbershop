@@ -62,9 +62,8 @@
 }
 
 .check-text {
-    font-size: 14px;
-    line-height: 1.2;
     color: #555555;
+    @include font(14px, null, 1.2, null);
     display: flex;
     align-items: center;
     // position: relative;

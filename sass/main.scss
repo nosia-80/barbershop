@@ -1,5 +1,7 @@
 @import "./utils/vars";
 @import "./base/reset";
+@import "./utils/placeholders";
+@import "./utils/mixins";
 @import "./base/common";
 @import "./utils/hidden";
 
@@ -7,11 +9,13 @@
 
 @import "./components/container";
 @import "./components/btn";
+@import "./components/socials-list";
 @import "./components/pre-title";
 @import "./components/section-title";
 @import "./components/backdrop";
 @import "./components/modal";
 @import "./components/form";
+@import "./components/socials";
 
 // LAYOUT
 
@@ -25,3 +29,4 @@
 @import "./layout/connect";
 @import "./layout/online";
 @import "./layout/contacts";
+@import "./layout/footer";
