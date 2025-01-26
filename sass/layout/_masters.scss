@@ -1,6 +1,20 @@
 .masters {
-    padding: 130px 0;
+    padding: 84px 0;
     background-color: #f7f7f7;
+
+    @media screen and (min-width: 768px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 130px 0;
+    }
+}
+
+.masters__container {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 450px;
+    }
 }
 
 .masters__pre-title {
@@ -14,13 +28,26 @@
 
 .masters-list {
     @extend %list;
-    display: flex;
-    margin-left: -30px;
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: -64px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-left: -30px;
+    }
 }
 
 .masters-list__item {
-    flex-basis: calc((100% - 90px) / 3);
-    margin-left: 30px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 64px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 90px) / 3);
+        margin-left: 30px;
+    }
 }
 
 .masters-list__content {

@@ -5,6 +5,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(157, 164, 189, 0.6);
+    padding: 35px 15px;
     transition: opacity 300ms linear, visibility 300ms linear;
 
     &.is-hidden {

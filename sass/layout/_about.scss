@@ -1,5 +1,13 @@
 .about {
-    padding: 139px 0 121px;
+    padding: 84px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 139px 0 121px;
+    }
 }
 
 .about__container {
@@ -8,13 +16,37 @@
 
 .about-list {
     @extend %list;
-    display: flex;
     flex-basis: calc((100% - 30px) / 2);
-    margin-right: 64px;
+    margin-right: 30px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-right: 64px;
+    }
 }
 
 .about-list__item:first-child {
-    margin-right: 30px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 30px;
+    }
+}
+
+.about__content {
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: 500px;
+    }
 }
 
 .about__pre-title {
@@ -24,19 +56,27 @@
 .about__title {
     color: $second-title-color;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 1199px) {
+        @include font(28px, null, 1.18, null);
+        max-width: 330px;
+    }
 }
 
 .about__after-title {
     color: #555555;
-    @include font(18px, null, 1.67, 0.02em);
+    @include font(16px, null, 1.63, 0.02em);
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+        @include font(18px, null, 1.67, null);
+    }
 }
 
 .about__text {
     color: #555555;
     @include font(14px, null, 1.86, 0.02em);
     margin-bottom: 40px;
-    width: 480px;
 }
 
 .about__btn {

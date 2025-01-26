@@ -1,31 +1,60 @@
 .reasons {
-    padding: 121px 0 130px;
+    padding: 84px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 121px 0 130px;
+    }
 }
 
 .reasons__container {
     display: flex;
+
+    @media screen and (max-width: 1199px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .reasons__stats {
-    display: flex;
-    justify-content: center;
-    margin-right: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        align-self: flex-end;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        margin-right: 30px;
+        flex-basis: calc((100% - 30px) / 2);
+    }
 }
 
-.reasons__stats,
 .reasons__content {
-    flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 44px;
+
+    @media screen and (min-width: 768px) {
+        width: 500px;
+    }
 }
 
 .reasons-list {
     @extend %list;
-    width: 370px;
     display: flex;
     flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 1199px) {
+        width: 370px;
+    }
 }
 
 .reasons-list__item {
-    width: 170px;
+    width: calc((100% - 30px) / 2);
     background-color: #f7f7f7;
     height: 133px;
     padding: 20px;
@@ -79,5 +108,4 @@
 .reasons__after-title {
     color: #555555;
     @include font(18px, null, 1.67, 0.02em);
-    width: 500px;
 }

@@ -1,26 +1,58 @@
 .contacts {
-    flex-basis: calc(50% - 15px);
-    padding: 130px 0 130px 100px;
+    padding: 84px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc(50% - 15px);
+        padding: 130px 0 130px 100px;
+    }
 }
 
-.contacts-title {
+.contacts__title {
     color: $first-title-color;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+}
+
+.contacts__content {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts__address {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 44px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 330px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 270px;
+        margin-bottom: 70px;
+    }
 }
 
 .contacts-list {
     @extend %list;
-    max-width: 270px;
-    margin-bottom: 70px;
 }
 
-.contacts-item {
+.contacts-list__item {
     & + & {
         margin-top: 20px;
     }
 }
 
-.contacts-link {
+.contacts-list__link {
     font-style: normal;
     @include font(18px, null, 1.67, 0.02em);
     color: #9da4bd;
@@ -35,27 +67,37 @@
     }
 }
 
-.contacts-link-line {
+.contacts-list__line {
     display: flex;
     align-items: center;
 }
 
-.contacts-link-icon {
+.contacts-list__icon {
     width: 24px;
     height: 24px;
     margin-right: 16px;
     stroke: currentColor;
 }
 
-.contacts-link-text {
-    margin-left: 40px;
+.contacts-list__text {
+    margin-left: 10px;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 40px;
+    }
 }
 
-.contacts-bottom-title {
+.contacts__bottom {
+    @media screen and (min-width: 768px) {
+        width: 330px;
+    }
+}
+
+.contacts__bottom-title {
     color: #ffffff;
 }
 
-.contacts-bottom-text {
+.contacts__bottom-text {
     color: #9da4bd;
     @include font(18px, null, 1.67, 0.02em);
 }

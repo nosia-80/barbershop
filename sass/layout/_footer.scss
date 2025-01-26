@@ -1,14 +1,32 @@
 .footer {
-    padding: 55px 0;
+    padding: 44px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 55px 0;
+    }
 }
 
 .footer__container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
+
+    @media screen and (min-width: 768px) {
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .footer__copy {
     color: #9da4bd;
     @include font($fs: 11px, $ls: 0.2em);
+}
+
+.footer__socials-list {
+    @media screen and (max-width: 767px) {
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
 }
