@@ -16,7 +16,22 @@
 }
 
 .logo__icon {
-    fill: #303030;
+    fill: #9d9ea0;
+
+    @media screen and (min-width: 768px) {
+        fill: #303030;
+    }
+}
+
+.site-nav {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        align-self: flex-start;
+        margin-top: 10px;
+    }
 }
 
 .site-list {
@@ -25,11 +40,34 @@
 }
 
 .site-list__item:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 24px;
+
+    @include desk {
+        margin-right: 40px;
+    }
 }
 
 .connect {
-    margin-left: auto;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    @include desk {
+        margin-left: auto;
+    }
+}
+
+.connect__tel {
+    @media screen and (max-width: 1199px) {
+        margin-top: 20px;
+    }
 }
 
 .site-list__link,
@@ -46,5 +84,8 @@
 
 .connect__btn {
     color: $first-btn-color;
-    margin-left: 40px;
+
+    @include desk {
+        margin-left: 40px;
+    }
 }

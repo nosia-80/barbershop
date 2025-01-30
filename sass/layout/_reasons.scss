@@ -1,11 +1,11 @@
 .reasons {
     padding: 84px 0;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         padding: 100px 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         padding: 121px 0 130px;
     }
 }
@@ -23,7 +23,7 @@
         align-self: flex-end;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         display: flex;
         justify-content: center;
         margin-right: 30px;
@@ -34,7 +34,7 @@
 .reasons__content {
     margin-bottom: 44px;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         width: 500px;
     }
 }
@@ -44,11 +44,11 @@
     display: flex;
     flex-wrap: wrap;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         width: 450px;
     }
 
-    @media screen and (min-width: 1199px) {
+    @include desk {
         width: 370px;
     }
 }

@@ -1,11 +1,11 @@
 .gallery {
     padding: 84px 0;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         padding: 100px 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         padding: 130px 0;
     }
 }
@@ -23,7 +23,7 @@
     @extend %list;
     margin-bottom: -30px;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         display: flex;
         flex-wrap: wrap;
         margin-left: -30px;
@@ -33,12 +33,12 @@
 .gallery-list__item {
     margin-bottom: 30px;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         flex-basis: calc(100% / 2 - 30px);
         margin-left: 30px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         flex-basis: calc(100% / 4 - 30px);
     }
 }

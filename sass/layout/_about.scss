@@ -1,11 +1,11 @@
 .about {
     padding: 84px 0;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         padding: 100px 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         padding: 139px 0 121px;
     }
 }
@@ -23,7 +23,7 @@
         display: none;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         display: flex;
         margin-right: 64px;
     }
@@ -34,17 +34,17 @@
         margin-bottom: 30px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         margin-right: 30px;
     }
 }
 
 .about__content {
-    @media screen and (min-width: 768px) {
+    @include tab {
         flex-basis: calc((100% - 30px) / 2);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         flex-basis: 500px;
     }
 }
@@ -68,7 +68,7 @@
     @include font(16px, null, 1.63, 0.02em);
     margin-bottom: 20px;
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         @include font(18px, null, 1.67, null);
     }
 }

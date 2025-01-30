@@ -1,26 +1,46 @@
 .contact-wrap {
     background-color: #191c26;
-    background-image: url("../images/contacts-bg-mobile.png");
+    background-image: url("../images/contacts/contacts-bg-mob.png");
     background-repeat: no-repeat;
+    background-size: 480px;
     background-position: bottom;
     max-width: 480px;
     margin: 0 auto;
 
-    @media screen and (min-width: 768px) {
-        background-image: url("../images/contacts-bg-tablet.png");
-        max-width: 768px;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url("../images/contacts/contacts-bg-mob-2x.png");
     }
 
-    @media screen and (min-width: 1200px) {
-        background-image: url("../images/contacts-bg.png");
+    @include tab {
+        background-image: url("../images/contacts/contacts-bg-tab.png");
+        background-size: 768px;
+        max-width: 768px;
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url("../images/contacts/contacts-bg-tab-2x.png");
+        }
+    }
+
+    @include desk {
+        background-image: url("../images/contacts/contacts-bg.png");
         background-size: calc(50% - 15px);
         background-position: right;
         max-width: 1280px;
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url("../images/contacts/contacts-bg-2x.png");
+        }
     }
 }
 
 .contact-wrap__container {
-    @media screen and (min-width: 1200px) {
+    @include desk {
         display: flex;
     }
 }

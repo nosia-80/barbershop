@@ -1,7 +1,7 @@
 .footer {
     padding: 44px 0;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         padding: 55px 0;
     }
 }
@@ -13,7 +13,7 @@
         flex-direction: column-reverse;
     }
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         justify-content: space-between;
         align-items: center;
     }

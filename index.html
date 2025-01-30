@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="./css/main.min.css" />
     </head>
     <body>
-        <!-- <header class="header">
+        <header class="header">
             <div class="container header__container">
                 <a
                     class="logo header__logo animate__animated animate__bounce link"
@@ -71,10 +71,105 @@
                         онлайн-запись
                     </button>
                 </div>
+                <button class="menu-open-btn" type="button" data-menu-open>
+                    <svg width="40" height="40">
+                        <use href="./images/icons.svg#icon-menu-open"></use>
+                    </svg>
+                </button>
             </div>
-        </header> -->
+            <div class="backdrop is-hidden" data-menu>
+                <div class="mob-menu">
+                    <div class="mob-menu-top">
+                        <button
+                            class="menu-close-btn"
+                            type="button"
+                            data-menu-close
+                        >
+                            <svg width="40" height="40">
+                                <use
+                                    href="./images/icons.svg#icon-menu-close"
+                                ></use>
+                            </svg>
+                        </button>
+                        <ul class="mob-menu-list">
+                            <li class="mob-menu-list__item">
+                                <a
+                                    class="mob-menu-list__link link"
+                                    href="#about"
+                                >
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="mob-menu-list__item">
+                                <a
+                                    class="mob-menu-list__link link"
+                                    href="#prices"
+                                >
+                                    Услуги и цены
+                                </a>
+                            </li>
+                            <li class="mob-menu-list__item">
+                                <a
+                                    class="mob-menu-list__link link"
+                                    href="#masters"
+                                >
+                                    Мастера
+                                </a>
+                            </li>
+                            <li class="mob-menu-list__item">
+                                <a
+                                    class="mob-menu-list__link link"
+                                    href="#contacts"
+                                >
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mob-menu-bottom">
+                        <div class="mob-connect mob-menu__connect">
+                            <a
+                                class="mob-connect__tel link"
+                                href="tel:+380441111111"
+                            >
+                                +38 044 111 11 11
+                            </a>
+                            <button
+                                class="mob-connect__btn btn"
+                                type="button"
+                                data-modal-open
+                            >
+                                онлайн-запись
+                            </button>
+                        </div>
+                        <ul class="mob-social">
+                            <li class="mob-social__item">
+                                <a
+                                    class="mob-social__link link"
+                                    href=""
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="mob-social__item">
+                                <a
+                                    class="mob-social__link link"
+                                    href=""
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Youtube
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
         <main>
-            <!-- <section class="hero">
+            <section class="hero">
                 <div class="container hero__container">
                     <div class="hero-social-box">
                         <ul class="hero-social-box__trans socials-list">
@@ -113,25 +208,53 @@
                         </p>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <section class="about" id="about">
                 <div class="container about__container">
                     <ul class="about-list">
                         <li class="about-list__item">
-                            <img
-                                src="./images/about-img-tab-1.jpg"
-                                alt="барбер бреет шею"
-                                width="270"
-                                height="445"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/about/about-img-1.jpg    1x,
+                                        ./images/about/about-img-1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/about/about-img-tab-1.jpg    1x,
+                                        ./images/about/about-img-tab-1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    src="./images/about/about-img-tab-1.jpg"
+                                    alt="барбер бреет шею"
+                                />
+                            </picture>
                         </li>
                         <li class="about-list__item">
-                            <img
-                                src="./images/about-img-tab-2.jpg"
-                                alt="барбер делает кантик"
-                                width="270"
-                                height="445"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/about/about-img-2.jpg    1x,
+                                        ./images/about/about-img-2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/about/about-img-tab-2.jpg    1x,
+                                        ./images/about/about-img-tab-2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    src="./images/about/about-img-tab-2.jpg"
+                                    alt="барбер делает кантик"
+                                />
+                            </picture>
                         </li>
                     </ul>
                     <div class="about__content">
@@ -268,12 +391,33 @@
                     <h2 class="masters__title section-title">Наши мастера</h2>
                     <ul class="masters-list">
                         <li class="masters-list__item">
-                            <img
-                                src="./images/masters-img-1.jpg"
-                                alt="Джон Смит стрижет клиента"
-                                width="370"
-                                height="346"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-1.jpg    1x,
+                                        ./images/masters/masters-img-1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-tab-1.jpg    1x,
+                                        ./images/masters/masters-img-tab-1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-mob-1.jpg    1x,
+                                        ./images/masters/masters-img-mob-1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    src="./images/masters/masters-img-mob-1.jpg"
+                                    alt="Джон Смит стрижет клиента"
+                                />
+                            </picture>
                             <div class="masters-list__content">
                                 <h3 class="masters-list__title" lang="en">
                                     John Smith
@@ -342,12 +486,33 @@
                             </div>
                         </li>
                         <li class="masters-list__item">
-                            <img
-                                src="./images/masters-img-2.jpg"
-                                alt="Мишель Доу стрижет клиента"
-                                width="370"
-                                height="346"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-2.jpg    1x,
+                                        ./images/masters/masters-img-2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-tab-2.jpg    1x,
+                                        ./images/masters/masters-img-tab-2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-mob-2.jpg    1x,
+                                        ./images/masters/masters-img-mob-2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    src="./images/masters/masters-img-mob-2.jpg"
+                                    alt="Мишель Доу стрижет клиента"
+                                />
+                            </picture>
                             <div class="masters-list__content">
                                 <h3 class="masters-list__title" lang="en">
                                     Michele Doe
@@ -416,12 +581,33 @@
                             </div>
                         </li>
                         <li class="masters-list__item">
-                            <img
-                                src="./images/masters-img-3.jpg"
-                                alt="Алан Блэк стрижет клиента"
-                                width="370"
-                                height="346"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-3.jpg    1x,
+                                        ./images/masters/masters-img-3-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-tab-3.jpg    1x,
+                                        ./images/masters/masters-img-tab-3-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/masters/masters-img-mob-3.jpg    1x,
+                                        ./images/masters/masters-img-mob-3-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    src="./images/masters/masters-img-mob-3.jpg"
+                                    alt="Мишель Доу стрижет клиента"
+                                />
+                            </picture>
                             <div class="masters-list__content">
                                 <h3 class="masters-list__title" lang="en">
                                     Alan Black
@@ -500,36 +686,134 @@
                     <h2 class="visually-hidden">Галерея</h2>
                     <ul class="gallery-list">
                         <li class="gallery-list__item">
-                            <img
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-1.jpg    1x,
+                                        ./images/gallery/gallery-img-1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-tab-1.jpg    1x,
+                                        ./images/gallery/gallery-img-tab-1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-mob-1.jpg    1x,
+                                        ./images/gallery/gallery-img-mob-1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+
+                                <img
+                                    src="./images/gallery/gallery-img-1.jpg"
+                                    alt="барбер стрижет клиента"
+                                />
+                            </picture>
+                            <!-- <img
+                                srcset="
+                                    ./images/gallery/gallery-img-1.jpg    1x,
+                                    ./images/gallery/gallery-img-1-2x.jpg 2x
+                                "
                                 src="./images/gallery-img-1.jpg"
                                 alt="барбер стрижет клиента"
                                 width="270"
                                 height="360"
-                            />
+                            /> -->
                         </li>
                         <li class="gallery-list__item">
-                            <img
-                                src="./images/gallery-img-2.jpg"
-                                alt="барбер бреет клиента"
-                                width="270"
-                                height="360"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-2.jpg    1x,
+                                        ./images/gallery/gallery-img-2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-tab-2.jpg    1x,
+                                        ./images/gallery/gallery-img-tab-2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-mob-2.jpg    1x,
+                                        ./images/gallery/gallery-img-mob-2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+
+                                <img
+                                    src="./images/gallery/gallery-img-2.jpg"
+                                    alt="барбер бреет клиента"
+                                />
+                            </picture>
                         </li>
                         <li class="gallery-list__item">
-                            <img
-                                src="./images/gallery-img-3.jpg"
-                                alt="барбер разогревает кожу клиента"
-                                width="270"
-                                height="360"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-3.jpg    1x,
+                                        ./images/gallery/gallery-img-3-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-tab-3.jpg    1x,
+                                        ./images/gallery/gallery-img-tab-3-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-mob-3.jpg    1x,
+                                        ./images/gallery/gallery-img-mob-3-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+
+                                <img
+                                    src="./images/gallery/gallery-img-3.jpg"
+                                    alt="барбер разогревает кожу клиента"
+                                />
+                            </picture>
                         </li>
                         <li class="gallery-list__item">
-                            <img
-                                src="./images/gallery-img-4.jpg"
-                                alt="барбер делает кантик"
-                                width="270"
-                                height="360"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-4.jpg    1x,
+                                        ./images/gallery/gallery-img-4-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-tab-4.jpg    1x,
+                                        ./images/gallery/gallery-img-tab-4-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery/gallery-img-mob-4.jpg    1x,
+                                        ./images/gallery/gallery-img-mob-4-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+
+                                <img
+                                    src="./images/gallery/gallery-img-4.jpg"
+                                    alt="барбер делает кантик"
+                                />
+                            </picture>
                         </li>
                     </ul>
                 </div>
@@ -782,5 +1066,6 @@
             </div>
         </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/menu.js"></script>
     </body>
 </html>

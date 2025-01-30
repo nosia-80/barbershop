@@ -2,18 +2,18 @@
     padding: 84px 0;
     background-color: #f7f7f7;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         padding: 100px 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         padding: 130px 0;
     }
 }
 
 .masters__container {
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        width: 450px;
+        width: 480px;
     }
 }
 
@@ -33,18 +33,21 @@
         margin-bottom: -64px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         display: flex;
         margin-left: -30px;
     }
 }
 
 .masters-list__item {
+    @media screen and (min-width: 768px) {
+        flex-basis: 450px;
+    }
     @media screen and (max-width: 1199px) {
         margin-bottom: 64px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         flex-basis: calc((100% - 90px) / 3);
         margin-left: 30px;
     }

@@ -1,5 +1,13 @@
 body {
     font-family: "Open Sans", sans-serif;
+
+    &.menu-open {
+        overflow: hidden;
+    }
+
+    &.modal-open {
+        overflow: hidden;
+    }
 }
 
 .link {

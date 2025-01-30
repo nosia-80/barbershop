@@ -1,0 +1,126 @@
+.menu-open-btn {
+    margin-left: auto;
+    fill: #9d9ea0;
+}
+
+.menu-close-btn {
+    fill: #303030;
+    position: absolute;
+    top: 48px;
+    right: 31px;
+}
+
+.menu-open-btn,
+.menu-close-btn {
+    display: inline-flex;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: color 300ms linear;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
+
+.mob-menu {
+    position: fixed;
+    background-color: #ffffff;
+    top: 0;
+    right: 0;
+    width: 359px;
+    height: 100vh;
+    z-index: 1;
+    padding: 118px 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(0);
+    transition: transform 500ms linear;
+
+    .backdrop.is-hidden & {
+        transform: translateX(100%);
+    }
+}
+
+// .mob-menu-bottom {
+//     margin-top: auto;
+// }
+
+.mob-menu-list {
+    @extend %list;
+}
+
+.mob-menu-list__item {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.mob-menu__connect {
+    margin-bottom: 64px;
+}
+
+.mob-connect__tel {
+    display: block;
+    margin-bottom: 24px;
+}
+
+.mob-menu-list__link,
+.mob-connect__tel {
+    @include font($lh: 1.39, $ls: 0.01em);
+    color: #303030;
+    transition: color 300ms linear;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.mob-social {
+    @extend %list;
+}
+
+.mob-social__item {
+    &:first-child {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            width: 60px;
+            height: 1px;
+            background-color: #303030;
+            margin-right: 40px;
+        }
+    }
+}
+
+.mob-social__item {
+    &:not(:first-child) {
+        margin-left: 100px;
+    }
+}
+
+.mob-social__item {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.mob-social__link {
+    color: #303030;
+    @include font($fs: 14px);
+    transition: color 300ms linear;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}

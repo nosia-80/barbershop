@@ -5,11 +5,11 @@
         text-align: center;
     }
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         padding: 100px 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         flex-grow: 1;
         padding: 130px 40px 130px 0;
     }
@@ -23,7 +23,7 @@
 .online__inputs {
     margin-bottom: 44px;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         display: flex;
         justify-content: space-between;
     }
@@ -33,11 +33,11 @@
     width: 100%;
     height: 24px;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         flex-basis: 330px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         flex-basis: 270px;
     }
 
@@ -48,7 +48,7 @@
     }
 
     &--short {
-        @media screen and (min-width: 1200px) {
+        @include desk {
             flex-basis: 260px;
         }
     }

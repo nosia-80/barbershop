@@ -1,11 +1,11 @@
 .contacts {
     padding: 84px 0;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         padding: 100px 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         flex-basis: calc(50% - 15px);
         padding: 130px 0 130px 100px;
     }
@@ -32,11 +32,11 @@
         margin-bottom: 44px;
     }
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         max-width: 330px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
         max-width: 270px;
         margin-bottom: 70px;
     }
@@ -82,13 +82,13 @@
 .contacts-list__text {
     margin-left: 10px;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
         margin-left: 40px;
     }
 }
 
 .contacts__bottom {
-    @media screen and (min-width: 768px) {
+    @include tab {
         width: 330px;
     }
 }
